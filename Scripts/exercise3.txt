@@ -1,0 +1,6 @@
+OMEDINTHEDISTANCEDURBEYFIELDWA
+
+I wrote a python script (3_6letterkey_vigenere.py) that generates keys based on
+the assumption that either E or T are the most common letters in the section. It
+then finds all the permutations of those keys and presents them sorted by the
+number of times that "THE" appears in the generated plaintext. 
