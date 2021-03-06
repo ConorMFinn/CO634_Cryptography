@@ -1,0 +1,5 @@
+URPASTMOODOFSELFPRESERVATIONTH
+
+Simple script (5_transSimple.py) written and used here to split the text into 
+columns. Then take the top of each column in turn until the plaintext is
+revealed. 
