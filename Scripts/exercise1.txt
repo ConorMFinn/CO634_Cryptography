@@ -1,0 +1,7 @@
+PLACEISTHEHERONSASTYLISHLODGIN
+
+I used a python script I wrote (included as caesar.py) to shift the alphabet 
+according to the most common character in the ciphertext. The script shifts
+assuming that the most common characters are either E, T, or A and printing all
+three posibilities. I am then able to choose the one that appears to be
+reasonable plaintext.
