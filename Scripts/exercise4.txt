@@ -1,0 +1,8 @@
+EILONGFORONLYONETHINGINHEAVENO
+
+Wrote another script here (4_4-6letterkey_vigenere). First used the EX3 script 
+to work out it was a 6 letter key as the decyphered text got more legible. Then
+had to find the 3rd most common letter in the excerpt, which turned out to be 
+H, and combined it with the other two generated keys before generating all the
+plaintexts, sorting by the "THE" frequency, and selecting the most reasonable
+one.

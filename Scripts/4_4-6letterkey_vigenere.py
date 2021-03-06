@@ -6,6 +6,7 @@ ciphertext = ciphertext.upper()
 
 alphabet = string.ascii_uppercase
 
+# Assumed key length
 KEYLEN = 6
 
 ciphers = []
@@ -38,6 +39,7 @@ for section in ciphers:
             largest_count = counts[letter]
             largest_letter = letter
 
+    # Assume 3 most common letters in the section.
     key += alphabet[(alphabet.index(largest_letter) - alphabet.index("E")) % 26]
     key2 += alphabet[(alphabet.index(largest_letter) - alphabet.index("T")) % 26]
     key3 += alphabet[(alphabet.index(largest_letter) - alphabet.index("H")) % 26]
@@ -48,6 +50,7 @@ print(key)
 print(key2)
 print(key3)
 
+# Get all combinations of the 3 generated keys
 combinations = [''.join(s) for s in itertools.product(*zip(key,key2))]
 all_combinations = []
 for combo in combinations:
@@ -55,6 +58,7 @@ for combo in combinations:
 
 combinations = list(set(all_combinations))
 
+# Generate all the possible plaintexts
 plaintexts = []
 for test_key in combinations:
     plaintext = ""
