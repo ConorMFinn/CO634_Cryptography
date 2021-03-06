@@ -1,3 +1,6 @@
+# Author: Conor Finn (CF338)
+# https://github.com/ConorMFinn/CO634_Cryptography
+
 text = input()
 
 # Try with cypher lengths between 4 and 6

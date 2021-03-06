@@ -1,3 +1,6 @@
+# Author: Conor Finn (CF338)
+# https://github.com/ConorMFinn/CO634_Cryptography
+
 import string
 
 # Start by analysing the original text for the frequency of each letter
