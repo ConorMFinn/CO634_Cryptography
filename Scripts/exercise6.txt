@@ -1,0 +1,6 @@
+NEVERPUTONEVENATTHEDAIRYNEVERS
+
+Essentially a brute force attack by 6_6transArbitrary.py. Finds all the
+different permutations of the columns and prints out all of them. Then simply
+sorts the list by the number of 'THE's in there. I can then just select the
+one that matches something in the main text (usually the bottom one).
