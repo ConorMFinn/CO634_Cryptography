@@ -1,6 +1,6 @@
 import string
-# Start by analysing the text for the frequency of each letter
 
+# Start by analysing the original text for the frequency of each letter
 full_text = open('tess27.txt').read()
 
 alphabet = string.ascii_uppercase + '|'
@@ -13,7 +13,7 @@ for letter in alphabet:
 for letter in alphabet:
     percentages[letter] = full_text.count(letter)/len(full_text)
 
-# Then analyse the ciphertext to find the frequency of each of those
+# Then analyse the ciphertext to find the frequency of each letters in that
 
 ciphertext = input()
 
@@ -25,7 +25,7 @@ for letter in alphabet:
 for letter in alphabet:
     percentages_cipher[letter] = ciphertext.count(letter)/len(ciphertext)
 
-# Match up similar % values to decrypt the cipher
+# Match up similar % values to get a baseline decryption mapping
 
 percentages = dict(sorted(percentages.items(), key=lambda item: item[1]))
 percentages_cipher =  dict(sorted(percentages_cipher.items(), key=lambda item: item[1]))
@@ -36,11 +36,12 @@ for cipher_letter, plain_letter in zip(percentages_cipher.keys(), percentages.ke
     mapping[cipher_letter] = plain_letter
 
 
-# Started with mapping directly between the frequency in the full text of tess27.txt 
-# and the frequency of letters in the ciphertext. Then went though the (wrong) generated
-# plaintext until I found words I recognised that were broken by one or two characters.
-# Slowly generated this list of amended mappings to get the final plaintext before checking
-# against the full plaintext. 
+# Started with mapping directly between the frequency of letters in the full 
+# text of tess27.txt and the frequency of letters in the ciphertext. Then went
+# though the generated plain(ish)text until I found words I recognised that 
+# were wrong by just one or two characters. Slowly generated this list of 
+# amended mappings to get the final plaintext before checking it exists in the 
+# full, original text. 
 mapping['A'] = 'W'
 mapping['C'] = 'I'
 mapping['D'] = 'R'
@@ -63,6 +64,7 @@ mapping['|'] = 'F'
 for map in mapping.keys():
     print(map + ": " + mapping[map])
 
+# Generate the plaintext
 plaintext = ""
 for letter in ciphertext:
     plaintext += mapping[letter]

@@ -1,0 +1,10 @@
+|AND|LEFT|A|TRAIN|OF|ILLS|HER|
+
+Wrote and used a script (7_substitution.py) to find the frequency of letters in
+the original text given in tess27.txt. Then found the frequency of letters in
+the supplied ciphertext. Used these frequencies to create a simple mapping from
+ciphertext back to plaintext. This still had a lot of issues, so I went through
+the generated plaintext and switched out letters based on words that only had 
+one or two incorrect letters. I kept repeating this process - running, 
+checking, amending - until I had a complete (enough) map to discover the
+complete plaintext. 
