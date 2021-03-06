@@ -1,0 +1,5 @@
+IANWHEELOOOTHENASILENCETHENAHE
+
+I wrote a python script (2_vigenere.py) to take the given key and shift each 
+letter of the ciphertext by the position if the alphabet of each key letter. 
+This repeats until the cipher is decrypted.
